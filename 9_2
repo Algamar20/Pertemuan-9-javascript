@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printContent(el){
+            var restorepage = document.body.innerHTML;
+            var printContent = document.getElementById(el).innerHTML;
+            document.body.innerHTML = printContent;
+            window.print();
+            document.body.innerHTML = restorepage;
+        }
+    </script>
+</head>
+<body>
+    <h1>Tutorialweb</h1>
+    <div id="div1">Tutorial Pemograman JavaScript</div>
+    <button onclick="printContent('div1')">Klik Untuk Print</button><br>
+
+    <div id="div2">Tutorial JavaScript</div>
+    <button onclick="printContent('div2')">Klik Untuk Print</button>
+
+    <p id="p1">Developh Website</p>
+    <button onclick="printContent('p1')">Klik Untuk Print</button>
+     
+    <div id="img"><br>
+        <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/03/26/2994041984.jpg" width="500px" alt="zoro">
+    </div>
+    <button onclick="printContent('img')">Klik untuk print gambar</button>
+</body>
+</html>
